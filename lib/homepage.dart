@@ -94,7 +94,9 @@ class _HomePageState extends State<HomePage> {
                       icon: Icon(Icons.edit),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        value.delete(index);
+                      },
                       icon: Icon(Icons.delete),
                     ),
                   ],

@@ -26,4 +26,11 @@ class MyProvider extends ChangeNotifier {
     getAllData();
     print('updated');
   }
+
+  Future<void> delete(int index) async {
+    Box<ModelClass> box = Hive.box<ModelClass>('hivebox');
+    await box.deleteAt(index);
+    getAllData();
+    print('deleted');
+  }
 }
