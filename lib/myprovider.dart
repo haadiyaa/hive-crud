@@ -19,4 +19,11 @@ class MyProvider extends ChangeNotifier {
     getAllData();
     print('added');
   }
+
+  Future<void> update(ModelClass model, int index) async {
+    Box<ModelClass> box = Hive.box<ModelClass>('hivebox');
+    await box.putAt(index, model);
+    getAllData();
+    print('updated');
+  }
 }

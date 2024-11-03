@@ -79,8 +79,10 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 ElevatedButton(
                                   onPressed: () {
-                                    name.clear();
                                     Navigator.pop(context);
+                                    value.update(
+                                        ModelClass(name: name.text), index);
+                                    name.clear();
                                   },
                                   child: Text('update'),
                                 ),

@@ -6,10 +6,7 @@ part 'model.g.dart';
 class ModelClass {
 
   @HiveField(0)
-  final int? id;
-
-  @HiveField(1)
   final String name;
 
-  ModelClass({this.id, required this.name});
+  ModelClass({required this.name});
 }
